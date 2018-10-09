@@ -10,18 +10,18 @@ public class Order {
 	@Id
 	private int orderid;
 	private int customerId;
-	private int productId;
+	private int products;
 	private LocalDateTime orderDate;
 	public Order() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Order(int orderid, int customerId, int productId, LocalDateTime orderDate) {
+	public Order(int orderid, int customerId, int products, LocalDateTime orderDate) {
 		super();
 		this.orderid = orderid;
 		this.customerId = customerId;
-		this.productId = productId;
+		this.products = products;
 		this.orderDate = orderDate;
 	}
 
@@ -37,12 +37,15 @@ public class Order {
 	public void setCustomerId(int customerId) {
 		this.customerId = customerId;
 	}
-	public int getProductId() {
-		return productId;
+	
+	public int getProducts() {
+		return products;
 	}
-	public void setProductId(int productId) {
-		this.productId = productId;
+
+	public void setProducts(int products) {
+		this.products = products;
 	}
+
 	public LocalDateTime getOrderDate() {
 		return orderDate;
 	}
@@ -52,7 +55,7 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "Order [orderid=" + orderid + ", customerId=" + customerId + ", productId=" + productId + ", orderDate="
+		return "Order [orderid=" + orderid + ", customerId=" + customerId + ", productId=" + products + ", orderDate="
 				+ orderDate + "]";
 	}
 	
