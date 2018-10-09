@@ -8,7 +8,7 @@ import javax.persistence.Id;
 @Entity
 public class Order {
 	@Id
-	private int orderid;
+	private int orderId;
 	private int customerId;
 	private int products;
 	private LocalDateTime orderDate;
@@ -17,20 +17,15 @@ public class Order {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Order(int orderid, int customerId, int products, LocalDateTime orderDate) {
+	public Order(int orderId, int customerId, int products, LocalDateTime orderDate) {
 		super();
-		this.orderid = orderid;
+		this.orderId = orderId;
 		this.customerId = customerId;
 		this.products = products;
 		this.orderDate = orderDate;
 	}
 
-	public int getOrderid() {
-		return orderid;
-	}
-	public void setOrderid(int orderid) {
-		this.orderid = orderid;
-	}
+	
 	public int getCustomerId() {
 		return customerId;
 	}
@@ -38,6 +33,14 @@ public class Order {
 		this.customerId = customerId;
 	}
 	
+	public int getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
+	}
+
 	public int getProducts() {
 		return products;
 	}
@@ -55,7 +58,7 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "Order [orderid=" + orderid + ", customerId=" + customerId + ", productId=" + products + ", orderDate="
+		return "Order [orderid=" + orderId + ", customerId=" + customerId + ", productId=" + products + ", orderDate="
 				+ orderDate + "]";
 	}
 	
